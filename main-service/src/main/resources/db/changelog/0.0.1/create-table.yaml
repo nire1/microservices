@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1_create_books_table
+      author: Tsai_Denis
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            tableExists:
+              tableName: book
+      changes:
+        - createTable:
+            tableName: book
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: title
+                  type: varchar(15)
+                  constraints:
+                    nullable: false
+
+
