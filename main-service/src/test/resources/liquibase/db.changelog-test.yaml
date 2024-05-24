@@ -8,9 +8,3 @@ databaseChangeLog:
   - include:
       file: 0.0.1/fill-author-table.yaml
       relativeToChangelogFile: true
-  - include:
-      file: 0.0.1/fill-book-table.yaml
-      relativeToChangelogFile: true
-  - include:
-      file: 0.0.1/restart-tables.yaml
-      relativeToChangelogFile: true

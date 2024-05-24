@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5_restart_tables_ids
+      author: TsaiDenis
+      changes:
+        - sqlFile:
+            path: db/changelog/sql/restart_ids.sql

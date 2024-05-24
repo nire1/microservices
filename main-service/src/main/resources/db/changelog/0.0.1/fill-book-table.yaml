@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4_fill_book_table
+      author: TsaiDenis
+      preConditions:
+        - onFail: MARK_RAN
+        - tableIsEmpty:
+            tableName: book
+      changes:
+        - loadData:
+            tableName: book
+            file: db/changelog/data/books.csv

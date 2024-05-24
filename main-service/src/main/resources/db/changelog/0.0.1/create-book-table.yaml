@@ -16,10 +16,26 @@ databaseChangeLog:
                   type: bigserial
                   constraints:
                     primaryKey: true
+                  autoIncrement: true
               - column:
                   name: title
                   type: varchar(15)
                   constraints:
+                    unique: true
                     nullable: false
+              - column:
+                  name: author_id
+                  type: bigint
+                  constraints:
+                    referencedTableName: author
+                    referencedColumnNames: id
+                    foreignKeyName: author_book_fk
+              - column:
+                  name: category
+                  type: varchar(15)
+                  constraints:
+                    nullable: false
+
+
 
 
