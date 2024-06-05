@@ -1,9 +1,0 @@
-spring:
-  liquibase:
-    change-log: liquibase/db.changelog-test.yaml
-    enabled: false
-  datasource:
-    url: jdbc:postgresql://localhost:5432/test_db
-    username: postgres
-    password: 131270
-    driver-class-name: org.postgresql.Driver
